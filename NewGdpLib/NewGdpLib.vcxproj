@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release MT|Win32">
+      <Configuration>Release MT</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F5E501F7-EE71-40EA-B658-3FD7213B3156}</ProjectGuid>
+    <RootNamespace>NewGdpLib</RootNamespace>
+    <ProjectName>WPMV2Lib</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120_xp</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release MT|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release MT|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)bin\lib\$(Configuration)\</OutDir>
+    <IncludePath>$(SolutionDir)Src;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)bin\lib\$(Configuration)\</OutDir>
+    <IncludePath>$(SolutionDir)Src;$(IncludePath)</IncludePath>
+    <SourcePath>$(VCInstallDir)atlmfc\src\mfc;$(VCInstallDir)atlmfc\src\mfcm;$(VCInstallDir)atlmfc\src\atl;$(VCInstallDir)crt\src;</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release MT|Win32'">
+    <OutDir>$(SolutionDir)bin\lib\$(Configuration)\</OutDir>
+    <IncludePath>$(SolutionDir)Src;$(IncludePath)</IncludePath>
+    <SourcePath>$(VCInstallDir)atlmfc\src\mfc;$(VCInstallDir)atlmfc\src\mfcm;$(VCInstallDir)atlmfc\src\atl;$(VCInstallDir)crt\src;</SourcePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MinSpace</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release MT|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Src\DumpLog\Log.h" />
+    <ClInclude Include="..\Src\DumpLog\ProgramLog.h" />
+    <ClInclude Include="..\Src\FunDefine.h" />
+    <ClInclude Include="..\Src\json\assertions.h" />
+    <ClInclude Include="..\Src\json\autolink.h" />
+    <ClInclude Include="..\Src\json\config.h" />
+    <ClInclude Include="..\Src\json\features.h" />
+    <ClInclude Include="..\Src\json\forwards.h" />
+    <ClInclude Include="..\Src\json\json.h" />
+    <ClInclude Include="..\Src\json\reader.h" />
+    <ClInclude Include="..\Src\json\src\json_batchallocator.h" />
+    <ClInclude Include="..\Src\json\src\json_tool.h" />
+    <ClInclude Include="..\Src\json\value.h" />
+    <ClInclude Include="..\Src\json\writer.h" />
+    <ClInclude Include="..\Src\Net\HttpDownload\HttpClient.h" />
+    <ClInclude Include="..\Src\Net\HttpDownload\TcpipSocket.h" />
+    <ClInclude Include="..\Src\Net\HttpDownload\UTL_FileTime.H" />
+    <ClInclude Include="..\Src\Net\HttpDownload\UTL_STRNUM.H" />
+    <ClInclude Include="..\Src\Net\winhttp.h" />
+    <ClInclude Include="..\Src\Net\WinHttpClient.h" />
+    <ClInclude Include="..\Src\Report\GReport.h" />
+    <ClInclude Include="..\Src\Report\report.h" />
+    <ClInclude Include="..\Src\Safe\ConvStr.h" />
+    <ClInclude Include="..\Src\Safe\dynamicFunction.h" />
+    <ClInclude Include="..\Src\Safe\eBase64.h" />
+    <ClInclude Include="..\Src\Safe\MD5.h" />
+    <ClInclude Include="..\Src\Safe\StrEncrypt.h" />
+    <ClInclude Include="..\Src\StrDefine.h" />
+    <ClInclude Include="..\Src\Strings\StringsHelper.h" />
+    <ClInclude Include="..\Src\tinyXml\tinystr.h" />
+    <ClInclude Include="..\Src\tinyXml\tinyxml.h" />
+    <ClInclude Include="..\Src\Utilities\atlrx.h" />
+    <ClInclude Include="..\Src\Utilities\eOSVer.h" />
+    <ClInclude Include="..\Src\Utilities\eRegOpt.h" />
+    <ClInclude Include="..\Src\Utilities\FileVersion.h" />
+    <ClInclude Include="..\Src\Utilities\Interlocked.h" />
+    <ClInclude Include="..\Src\Utilities\NationLanguage.h" />
+    <ClInclude Include="..\Src\Utilities\RegExp.h" />
+    <ClInclude Include="..\Src\Utilities\Singleton.h" />
+    <ClInclude Include="..\Src\Utilities\uid.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Src\json\src\json_internalarray.inl" />
+    <None Include="..\Src\json\src\json_internalmap.inl" />
+    <None Include="..\Src\json\src\json_valueiterator.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Src\DumpLog\Log.cpp" />
+    <ClCompile Include="..\Src\DumpLog\ProgramLog.cpp" />
+    <ClCompile Include="..\Src\json\src\json_reader.cpp" />
+    <ClCompile Include="..\Src\json\src\json_value.cpp" />
+    <ClCompile Include="..\Src\json\src\json_writer.cpp" />
+    <ClCompile Include="..\Src\Net\HttpDownload\HttpClient.cpp" />
+    <ClCompile Include="..\Src\Net\HttpDownload\TcpipSocket.cpp" />
+    <ClCompile Include="..\Src\Net\HttpDownload\UTL_FileTime.cpp" />
+    <ClCompile Include="..\Src\Report\GReport.cpp" />
+    <ClCompile Include="..\Src\Report\report.cpp" />
+    <ClCompile Include="..\Src\Safe\dynamicFunction.cpp" />
+    <ClCompile Include="..\Src\Safe\eBase64.cpp" />
+    <ClCompile Include="..\Src\Safe\MD5.cpp" />
+    <ClCompile Include="..\Src\Safe\StrEncrypt.cpp" />
+    <ClCompile Include="..\Src\Strings\StringsHelper.cpp" />
+    <ClCompile Include="..\Src\tinyXml\tinystr.cpp" />
+    <ClCompile Include="..\Src\tinyXml\tinyxml.cpp" />
+    <ClCompile Include="..\Src\tinyXml\tinyxmlerror.cpp" />
+    <ClCompile Include="..\Src\tinyXml\tinyxmlparser.cpp" />
+    <ClCompile Include="..\Src\Utilities\eRegOpt.cpp" />
+    <ClCompile Include="..\Src\Utilities\FileVersion.cpp" />
+    <ClCompile Include="..\Src\Utilities\NationLanguage.cpp" />
+    <ClCompile Include="..\Src\Utilities\uid.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

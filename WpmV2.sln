@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WPMV2", "NewGdp\NewGdp.vcxproj", "{73044744-BACE-4746-8937-277482087085}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F5E501F7-EE71-40EA-B658-3FD7213B3156} = {F5E501F7-EE71-40EA-B658-3FD7213B3156}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WPMV2Lib", "NewGdpLib\NewGdpLib.vcxproj", "{F5E501F7-EE71-40EA-B658-3FD7213B3156}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release MT|Win32 = Release MT|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73044744-BACE-4746-8937-277482087085}.Debug|Win32.ActiveCfg = Debug|Win32
+		{73044744-BACE-4746-8937-277482087085}.Debug|Win32.Build.0 = Debug|Win32
+		{73044744-BACE-4746-8937-277482087085}.Release MT|Win32.ActiveCfg = Release MT|Win32
+		{73044744-BACE-4746-8937-277482087085}.Release MT|Win32.Build.0 = Release MT|Win32
+		{73044744-BACE-4746-8937-277482087085}.Release|Win32.ActiveCfg = Release|Win32
+		{73044744-BACE-4746-8937-277482087085}.Release|Win32.Build.0 = Release|Win32
+		{F5E501F7-EE71-40EA-B658-3FD7213B3156}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F5E501F7-EE71-40EA-B658-3FD7213B3156}.Debug|Win32.Build.0 = Debug|Win32
+		{F5E501F7-EE71-40EA-B658-3FD7213B3156}.Release MT|Win32.ActiveCfg = Release MT|Win32
+		{F5E501F7-EE71-40EA-B658-3FD7213B3156}.Release MT|Win32.Build.0 = Release MT|Win32
+		{F5E501F7-EE71-40EA-B658-3FD7213B3156}.Release|Win32.ActiveCfg = Release|Win32
+		{F5E501F7-EE71-40EA-B658-3FD7213B3156}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
