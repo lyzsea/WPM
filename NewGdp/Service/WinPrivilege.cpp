@@ -213,7 +213,7 @@ void CWinPrivilege::DelSelf()
 	//EndFun
 }
 
-bool CWinPrivilege::LaunchAppAsAdminUser(const std::wstring& szImage, const std::wstring& szCmdline,bool bWait)
+bool CWinPrivilege::LaunchAppAsAdminUser(const std::wstring& szImage, const std::wstring& szCmdline, DWORD& dwRetCode,bool bWait)
 {
 	if(szImage.empty())
 	{
@@ -239,9 +239,7 @@ bool CWinPrivilege::LaunchAppAsAdminUser(const std::wstring& szImage, const std:
 		return false;
 
 	DWORD dwProcessId;
-
-
-	bResult = Utilities::svc::CeSvcTokenUtilities::ExecutebyToken(szImage, szCmdline, FALSE, hTokenObtain, dwProcessId,bWait);
+	bResult = Utilities::svc::CeSvcTokenUtilities::ExecutebyToken(szImage, szCmdline, FALSE, hTokenObtain, dwProcessId, dwRetCode,bWait);
 
 
 	return SUCCEEDED(bResult);

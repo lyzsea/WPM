@@ -6,6 +6,12 @@
 *.lo
 *.o
 *.obj
+*.log
+*.plog
+*.suo
+*.sdf
+*.pdb
+*.tlog
 
 # Precompiled Headers
 *.gch
@@ -51,4 +57,5 @@ cmake-build-debug/
 Debug/
 Release/
 x64/
+Release MT/
 Release MT/

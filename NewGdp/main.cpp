@@ -42,8 +42,8 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 	if (cmdLine.HasParam(CMDLINE_PARAM_NAME_CAPTURE))
 	{
 		DebugOutputMsg(_T("CaptureScreenImage  begin"));
-		DWORD dwCaptureId = 0;
-		CCaptureScreen::CaptureScreenImage(GetDesktopWindow(), dwCaptureId);
+		
+		DWORD dwCaptureId = CCaptureScreen::CaptureScreenImage(GetDesktopWindow());
 		DebugOutputMsg(_T("CaptureScreenImage fileID = [%d]", dwCaptureId));
 		return dwCaptureId;
 	}

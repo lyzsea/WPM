@@ -31,7 +31,7 @@ namespace Utilities{namespace svc{
 		const std::wstring& strCmdline, 
 		BOOL bShow,
 		HANDLE m_hToken,
-		DWORD& dwProcessId,bool bWait)
+		DWORD& dwProcessId,DWORD& dwRetCode,bool bWait)
 
 	{
 		HRESULT hr = S_OK;
@@ -118,9 +118,10 @@ Exit0:
 			{
 				WaitForSingleObject(pi.hProcess,INFINITE);
 			}
-			else
+			//else
 			{
 				dwProcessId = pi.dwProcessId;
+				GetExitCodeProcess(pi.hProcess, &dwRetCode);
 				if ( pi.hThread )
 				{
 					CloseHandle( pi.hThread );

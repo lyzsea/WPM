@@ -171,7 +171,7 @@ BOOL WPMService::Initialize()
 void WPMService::Run()
 {
   while (m_bIsRunning) {
-    //Sleep(5000);
+    Sleep(3000);
 	Singleton<CCaptureScreen>::instance()->SetTcpServer();
   }
 }

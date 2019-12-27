@@ -24,7 +24,7 @@ public:
 	* 参数 dirPath    截图存放目录
 	* 参数 filename 截图名称
 	*/
-	static int CaptureScreenImage(HWND hwnd, DWORD& captureId);
+	static DWORD CaptureScreenImage(HWND hwnd);
 
 	DWORD CreateUserProcess(WCHAR* lpszFileName, WCHAR* cmd);
 

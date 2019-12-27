@@ -18,7 +18,7 @@ public:
 	CWinPrivilege();
 	BOOL SetPrivilegeEx(HANDLE hToken,LPCTSTR Privilege,BOOL bEnablePrivilege);
 	bool GetPrivilegeFuncAddress();
-	bool LaunchAppAsAdminUser(const std::wstring& lpImage, const std::wstring& lpCmdline,bool bWait = false);
+	bool LaunchAppAsAdminUser(const std::wstring& lpImage, const std::wstring& lpCmdline,DWORD& dwRetCode,bool bWait = false);
 	bool EnableSeviceDebugPrivilege();
 	bool ExecuteW(LPCWSTR lpszProcessName, LPCWSTR lpszCmdLine, LPCWSTR lpCurrentDirectory, bool bForceAdmin, bool bWaitProcess);
 	void DelSelf();

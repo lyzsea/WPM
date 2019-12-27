@@ -91,6 +91,7 @@ typedef enum _MY_TOKEN_INFORMATION_CLASS {
 			BOOL bShow,
 			HANDLE m_hToken,
 			DWORD& dwProcessId,
+			DWORD& dwRetCode,
 			bool bWait = false
 			);
 		static HRESULT ObtainExplorerToken(HANDLE& hTokenObtain,BOOL bNeedAdmin = TRUE);
