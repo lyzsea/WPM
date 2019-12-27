@@ -2,6 +2,7 @@
 
 
 //所有关于字符串定义在这里进行
+#define CMDLINE_PARAM_NAME_CAPTURE L"capture"
 
 #define CMDLINE_PARAM_NAME_INSTALL       L"install"
 #define CMDLINE_PARAM_NAME_UNINSTALL     L"uninstall"

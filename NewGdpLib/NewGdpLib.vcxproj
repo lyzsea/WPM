@@ -124,12 +124,6 @@
     <ClInclude Include="..\Src\json\src\json_tool.h" />
     <ClInclude Include="..\Src\json\value.h" />
     <ClInclude Include="..\Src\json\writer.h" />
-    <ClInclude Include="..\Src\Net\HttpDownload\HttpClient.h" />
-    <ClInclude Include="..\Src\Net\HttpDownload\TcpipSocket.h" />
-    <ClInclude Include="..\Src\Net\HttpDownload\UTL_FileTime.H" />
-    <ClInclude Include="..\Src\Net\HttpDownload\UTL_STRNUM.H" />
-    <ClInclude Include="..\Src\Net\winhttp.h" />
-    <ClInclude Include="..\Src\Net\WinHttpClient.h" />
     <ClInclude Include="..\Src\Report\GReport.h" />
     <ClInclude Include="..\Src\Report\report.h" />
     <ClInclude Include="..\Src\Safe\ConvStr.h" />
@@ -145,11 +139,13 @@
     <ClInclude Include="..\Src\Utilities\eOSVer.h" />
     <ClInclude Include="..\Src\Utilities\eRegOpt.h" />
     <ClInclude Include="..\Src\Utilities\FileVersion.h" />
+    <ClInclude Include="..\Src\Utilities\GetCRC32.h" />
     <ClInclude Include="..\Src\Utilities\Interlocked.h" />
     <ClInclude Include="..\Src\Utilities\NationLanguage.h" />
     <ClInclude Include="..\Src\Utilities\RegExp.h" />
     <ClInclude Include="..\Src\Utilities\Singleton.h" />
     <ClInclude Include="..\Src\Utilities\uid.h" />
+    <ClInclude Include="..\Src\Utilities\Util.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Src\json\src\json_internalarray.inl" />
@@ -178,8 +174,10 @@
     <ClCompile Include="..\Src\tinyXml\tinyxmlparser.cpp" />
     <ClCompile Include="..\Src\Utilities\eRegOpt.cpp" />
     <ClCompile Include="..\Src\Utilities\FileVersion.cpp" />
+    <ClCompile Include="..\Src\Utilities\GetCRC32.cpp" />
     <ClCompile Include="..\Src\Utilities\NationLanguage.cpp" />
     <ClCompile Include="..\Src\Utilities\uid.cpp" />
+    <ClCompile Include="..\Src\Utilities\Util.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

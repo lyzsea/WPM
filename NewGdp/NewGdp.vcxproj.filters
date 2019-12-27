@@ -16,9 +16,6 @@
     <Filter Include="Source Files\Service">
       <UniqueIdentifier>{8bc65406-d755-4f0c-9eb2-e8197ad9253e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Update">
-      <UniqueIdentifier>{1e57b16c-d1b9-4120-9979-c2ef10d6700d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\AntiVm">
       <UniqueIdentifier>{593d8949-e368-4421-9814-04903fddd2f8}</UniqueIdentifier>
     </Filter>
@@ -48,9 +45,6 @@
     <ClInclude Include="Service\WinPrivilege.h">
       <Filter>Source Files\Service</Filter>
     </ClInclude>
-    <ClInclude Include="Update\GdpUpdate.h">
-      <Filter>Source Files\Update</Filter>
-    </ClInclude>
     <ClInclude Include="Service\Procprivilege.h">
       <Filter>Source Files\Service</Filter>
     </ClInclude>
@@ -75,12 +69,12 @@
     <ClInclude Include="Service\APIService.h">
       <Filter>Source Files\Service</Filter>
     </ClInclude>
+    <ClInclude Include="captureScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="NewGdp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Configure.cpp">
@@ -91,9 +85,6 @@
     </ClCompile>
     <ClCompile Include="Service\WinPrivilege.cpp">
       <Filter>Source Files\Service</Filter>
-    </ClCompile>
-    <ClCompile Include="Update\GdpUpdate.cpp">
-      <Filter>Source Files\Update</Filter>
     </ClCompile>
     <ClCompile Include="Service\WinToken.cpp">
       <Filter>Source Files\Service</Filter>
@@ -112,6 +103,12 @@
     </ClCompile>
     <ClCompile Include="Service\APIService.cpp">
       <Filter>Source Files\Service</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="captureScreen.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

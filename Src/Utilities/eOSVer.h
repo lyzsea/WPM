@@ -2,10 +2,10 @@
 /* 
     Date : 10/29/2012
 	File : WINOSVER.H
-    Author : Eadwin  (lidi@elex-tech.com)
-    Funtion :  
+    11
+       
 	Version : 1.0
-	Copyright (c) 2012 ELEX CDD
+	Copyright
 */
 /************************************************************************/  
 

@@ -1,24 +1,25 @@
-﻿Build started 2019/12/12 下午9:21:57.
-     1>Project "\\Mac\Home\books\train\project-saudi\WPM2.0\NewGdp\NewGdp.vcxproj" on node 2 (Build target(s)).
-     1>ResourceCompile:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\bin\rc.exe /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"Debug\NewGdp.res" NewGdp.rc 
+﻿Build started 2019/12/26 下午7:30:42.
+     1>Project "Y:\books\train\Rootkit-saudi\labs\Day3-persistence\WPM\NewGdp\NewGdp.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _CRT_SECURE_NO_WARNINGS /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Service\WPMService.cpp
+         WPMService.cpp
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"\\Mac\Home\books\train\project-saudi\WPM2.0\Bin\Debug\WPMV2.exe" /INCREMENTAL /NOLOGO WPMV2Lib.lib Version.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='requireAdministrator' uiAccess='false'" /manifest:embed /DEBUG /PDB:"\\Mac\Home\books\train\project-saudi\WPM2.0\Bin\Debug\WPMV2.pdb" /SUBSYSTEM:WINDOWS,"5.01" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"\\Mac\Home\books\train\project-saudi\WPM2.0\Bin\Debug\WPMV2.lib" /MACHINE:X86 Debug\NewGdp.res
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Y:\books\train\Rootkit-saudi\labs\Day3-persistence\WPM\Bin\Debug\WPMV2.exe" /INCREMENTAL /NOLOGO WPMV2Lib.lib Version.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='requireAdministrator' uiAccess='false'" /manifest:embed /DEBUG /PDB:"Y:\books\train\Rootkit-saudi\labs\Day3-persistence\WPM\Bin\Debug\WPMV2.pdb" /SUBSYSTEM:WINDOWS,"5.01" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"Y:\books\train\Rootkit-saudi\labs\Day3-persistence\WPM\Bin\Debug\WPMV2.lib" /MACHINE:X86 Debug\NewGdp.res
          Debug\md5.obj
          Debug\StringMatch.obj
          Debug\VMDetect.obj
+         Debug\captureScreen.obj
          Debug\Configure.obj
-         Debug\NewGdp.obj
+         Debug\main.obj
          Debug\ServiceInstaller.obj
          Debug\APIService.obj
          Debug\WinPrivilege.obj
          Debug\WinToken.obj
          Debug\WPMService.obj
          Debug\stdafx.obj
-         Debug\GdpUpdate.obj
-         NewGdp.vcxproj -> \\Mac\Home\books\train\project-saudi\WPM2.0\Bin\Debug\WPMV2.exe
-     1>Done Building Project "\\Mac\Home\books\train\project-saudi\WPM2.0\NewGdp\NewGdp.vcxproj" (Build target(s)).
+         NewGdp.vcxproj -> Y:\books\train\Rootkit-saudi\labs\Day3-persistence\WPM\Bin\Debug\WPMV2.exe
+     1>Done Building Project "Y:\books\train\Rootkit-saudi\labs\Day3-persistence\WPM\NewGdp\NewGdp.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.06
+Time Elapsed 00:00:01.81

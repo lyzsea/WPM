@@ -2,10 +2,10 @@
 /* 
     Date : 10/15/2012
 	File : ZBASE64.CPP
-    Author : Eadwin  (lidi@elex-tech.com)
-    Funtion :  
+    11
+       
 	Version : 1.0
-	Copyright (c) 2012 ELEX CDD
+	Copyright
 */
 /************************************************************************/  
 

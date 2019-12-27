@@ -46,7 +46,7 @@ CServiceInstaller::CServiceInstaller(WPMService* pService)
 
 	::GetModuleFileNameW(NULL,strAppPath,MAX_PATHEX);
 	m_strCurModule = strAppPath;
-
+	DebugOutputMsg(_T("m_strAppDir path =[%s]"), m_strAppDir.c_str());
 	//AppdirLog = m_strAppDir + L"wprotectmanager.log";
 	//
 	// DWORD dwMask 掩码，控制哪些日志需要真正写入

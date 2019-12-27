@@ -1,0 +1,53 @@
+#sites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.out
+*.appePDATE MY_TABLE SET USER_TYPE = '100', `####` = '####', USER_ID = 38283397;
+
+#makefiles
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+
+#IDE
+.DS_STORE
+.idea
+cmake-build-debug/
+*.sdf
+Debug/
+Release/
+x64/

@@ -2,10 +2,11 @@
 /* 
     Date : 10/31/2012
 	File : NTSERVICE.H
-    Author : Eadwin  (lidi@elex-tech.com)
-    Funtion :  
+    
+
+       
 	Version : 1.0
-	Copyright (c) 2012 ELEX CDD
+	Copyright
 */
 /************************************************************************/  
 #pragma once

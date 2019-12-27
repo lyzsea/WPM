@@ -1,0 +1,24 @@
+﻿Build started 2019/12/26 下午9:14:15.
+     1>Project "Y:\books\train\Rootkit-saudi\labs\Day3-persistence\WPM\NewGdp\NewGdp.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Y:\books\train\Rootkit-saudi\labs\Day3-persistence\WPM\Bin\Release MT\WPMV2.exe" /INCREMENTAL:NO /NOLOGO Version.lib WPMV2Lib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib Delayimp.lib /DELAYLOAD:SHLWAPI.dll /DELAYLOAD:USERENV.dll /DELAYLOAD:SHELL32.dll /MANIFEST /MANIFESTUAC:"level='requireAdministrator' uiAccess='false'" /manifest:embed /PDB:"Y:\books\train\Rootkit-saudi\labs\Day3-persistence\WPM\Bin\Release MT\WPMV2.pdb" /SUBSYSTEM:WINDOWS,"5.01" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"Y:\books\train\Rootkit-saudi\labs\Day3-persistence\WPM\Bin\Release MT\WPMV2.lib" /MACHINE:X86 /SAFESEH "Release MT\NewGdp.res"
+         "Release MT\md5.obj"
+         "Release MT\StringMatch.obj"
+         "Release MT\VMDetect.obj"
+         "Release MT\captureScreen.obj"
+         "Release MT\Configure.obj"
+         "Release MT\main.obj"
+         "Release MT\ServiceInstaller.obj"
+         "Release MT\APIService.obj"
+         "Release MT\WinPrivilege.obj"
+         "Release MT\WinToken.obj"
+         "Release MT\WPMService.obj"
+         "Release MT\stdafx.obj"
+         Generating code
+         Finished generating code
+         NewGdp.vcxproj -> Y:\books\train\Rootkit-saudi\labs\Day3-persistence\WPM\Bin\Release MT\WPMV2.exe
+     1>Done Building Project "Y:\books\train\Rootkit-saudi\labs\Day3-persistence\WPM\NewGdp\NewGdp.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.32

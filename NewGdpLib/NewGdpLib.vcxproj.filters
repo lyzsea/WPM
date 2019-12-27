@@ -9,18 +9,6 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="ShareMoudle\File">
-      <UniqueIdentifier>{8fd7d1ad-9019-4f81-bf82-87bd76aee563}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ShareMoudle\Reg">
-      <UniqueIdentifier>{6dcb6fb0-2125-4cf9-ac4e-556e155d9544}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ShareMoudle\Thread">
-      <UniqueIdentifier>{8d3d9029-72aa-4dea-8cae-e73cca8a2a79}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ShareMoudle\Svc">
-      <UniqueIdentifier>{59952601-feac-41e4-8cfa-6f036f39f808}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ShareMoudle\Safe">
       <UniqueIdentifier>{7cf54fe6-6592-4ce1-b83f-c0e1645b9cca}</UniqueIdentifier>
     </Filter>
@@ -36,14 +24,8 @@
     <Filter Include="ShareMoudle\Report">
       <UniqueIdentifier>{5da0723f-1b08-462c-89f2-87f417002869}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ShareMoudle\Net">
-      <UniqueIdentifier>{3275f7ee-afbc-4315-86cf-84b5ffa9bdd3}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ShareMoudle\strings">
       <UniqueIdentifier>{b154ec4c-5e0f-40d5-bfcd-18a298397991}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ShareMoudle\Net\HttpDownload">
-      <UniqueIdentifier>{a3bac793-f6e3-4b9f-9b47-625ddad7397b}</UniqueIdentifier>
     </Filter>
     <Filter Include="ShareMoudle\DumpLog">
       <UniqueIdentifier>{cce1d718-3346-401a-8aea-3e8c5895d7d1}</UniqueIdentifier>
@@ -116,12 +98,6 @@
     <ClInclude Include="..\Src\Report\report.h">
       <Filter>ShareMoudle\Report</Filter>
     </ClInclude>
-    <ClInclude Include="..\Src\Net\winhttp.h">
-      <Filter>ShareMoudle\Net</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Src\Net\WinHttpClient.h">
-      <Filter>ShareMoudle\Net</Filter>
-    </ClInclude>
     <ClInclude Include="..\Src\Strings\StringsHelper.h">
       <Filter>ShareMoudle\strings</Filter>
     </ClInclude>
@@ -146,18 +122,6 @@
     <ClInclude Include="..\Src\StrDefine.h">
       <Filter>ShareMoudle</Filter>
     </ClInclude>
-    <ClInclude Include="..\Src\Net\HttpDownload\HttpClient.h">
-      <Filter>ShareMoudle\Net\HttpDownload</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Src\Net\HttpDownload\TcpipSocket.h">
-      <Filter>ShareMoudle\Net\HttpDownload</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Src\Net\HttpDownload\UTL_FileTime.H">
-      <Filter>ShareMoudle\Net\HttpDownload</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Src\Net\HttpDownload\UTL_STRNUM.H">
-      <Filter>ShareMoudle\Net\HttpDownload</Filter>
-    </ClInclude>
     <ClInclude Include="..\Src\Safe\dynamicFunction.h">
       <Filter>ShareMoudle\Safe</Filter>
     </ClInclude>
@@ -172,6 +136,12 @@
     </ClInclude>
     <ClInclude Include="..\Src\tinyXml\tinyxml.h">
       <Filter>ShareMoudle\tinyXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Utilities\Util.h">
+      <Filter>ShareMoudle\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Utilities\GetCRC32.h">
+      <Filter>ShareMoudle\Utilities</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -254,6 +224,12 @@
     </ClCompile>
     <ClCompile Include="..\Src\tinyXml\tinyxmlparser.cpp">
       <Filter>ShareMoudle\tinyXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Utilities\Util.cpp">
+      <Filter>ShareMoudle\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Utilities\GetCRC32.cpp">
+      <Filter>ShareMoudle\Utilities</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

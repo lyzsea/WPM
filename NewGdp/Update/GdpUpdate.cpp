@@ -225,7 +225,7 @@ bool CGdpUpdate::DownLoadConf()
 		strGdpVer.c_str(),
 		strGuid.c_str(),
 		strUpdateVersion.c_str());
-
+	LOG_INFO(L"DownLoadConf request path: %s", wcsRequest);
 	std::wstring strConf = m_strDir + L"conf";
 	CHttpDownloader1 downloader(wcsRequest, strConf);
 
@@ -249,8 +249,9 @@ bool CGdpUpdate::DownLoadConf()
 	std::wstring wstrTextDecode;
 	if (!GdpBase64Decode(wstrText, wstrTextDecode))
 		return false;
-	std::string strTextDecode = strings::ws2s(wstrTextDecode, CP_UTF8);
-
+	std::string strTextDecode = strings::
+		s(wstrTextDecode, CP_UTF8);
+	LOG_INFO(L"strTextDecode: %s ", strTextDecode.c_str());
 	Json::Value valRoot;
 	Json::Reader reader;
 	if (!reader.parse(strTextDecode,valRoot))

@@ -118,7 +118,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release MT|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <Optimization>MinSpace</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -137,11 +137,12 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>Version.lib;WPMV2Lib.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
       <DelayLoadDLLs>SHLWAPI.dll;USERENV.dll;SHELL32.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
     </Link>
     <PreBuildEvent>
-      <Command>$(SolutionDir)SubWCRev.exe $(SolutionDir) $(ProjectDir)version_temp.h $(ProjectDir)version.h</Command>
+      <Command>
+      </Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -152,6 +153,7 @@
     <ClInclude Include="AntiVm\StringMatch.h" />
     <ClInclude Include="AntiVm\VMDetect.h" />
     <ClInclude Include="CallMeUpLoadByUninstall.h" />
+    <ClInclude Include="captureScreen.h" />
     <ClInclude Include="Configure.h" />
     <ClInclude Include="NewGdp.h" />
     <ClInclude Include="Resource.h" />
@@ -163,14 +165,14 @@
     <ClInclude Include="Service\WPMService.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="Update\GdpUpdate.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AntiVm\md5.cpp" />
     <ClCompile Include="AntiVm\StringMatch.cpp" />
     <ClCompile Include="AntiVm\VMDetect.cpp" />
+    <ClCompile Include="captureScreen.cpp" />
     <ClCompile Include="Configure.cpp" />
-    <ClCompile Include="NewGdp.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="ServiceInstaller.cpp" />
     <ClCompile Include="Service\APIService.cpp" />
     <ClCompile Include="Service\WinPrivilege.cpp" />
@@ -181,7 +183,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release MT|Win32'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Update\GdpUpdate.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="NewGdp.rc" />

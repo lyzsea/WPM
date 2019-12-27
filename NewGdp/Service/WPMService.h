@@ -2,8 +2,7 @@
 #define WPMV2_NEWGDP_SERVICE_H_
 #pragma once
 
-#include "../Update/GdpUpdate.h"
-
+//#include "../Update/GdpUpdate.h"
 #include <tchar.h> 
 #include <windows.h>
 
@@ -71,8 +70,6 @@ private:
     const _TCHAR* pszS1 = NULL,
     const _TCHAR* pszS2 = NULL,
     const _TCHAR* pszS3 = NULL);
-
-  CGdpUpdate	m_update;
 };
 
 #endif  // WPMV2_NEWGDP_SERVICE_H_

@@ -9,7 +9,23 @@
 
 #define WIN32_LEAN_AND_MEAN             // Exclude rarely-used stuff from Windows headers
 // Windows Header Files:
-#include <windows.h>
+#ifndef WIN32
+#include <unistd.h>
+#include <cstdlib>
+#include <cstring>
+#include <netdb.h>
+#else
+#define WIN32_LEAN_AND_MEAN
+#include <WinSock2.h>
+#include <WS2tcpip.h>
+#include <Windows.h>
+#endif
+
+#ifndef WIN32
+void* recvdata(void*);
+#else
+DWORD WINAPI recvdata(LPVOID);
+#endif
 
 // C RunTime Header Files
 #include <stdlib.h>
@@ -47,3 +63,5 @@ extern  std::string g_strGuid;
 
 
 extern wchar_t g_szGuid[MAX_PATH];
+
+void DebugOutputMsg(const _TCHAR* pszFormat, ...);

@@ -1,9 +1,12 @@
-﻿Build started 2019/12/12 下午9:05:36.
-     1>Project "\\Mac\Home\books\train\project-saudi\WPM2.0\NewGdpLib\NewGdpLib.vcxproj" on node 2 (Build target(s)).
+﻿Build started 2019/12/26 下午7:22:28.
+     1>Project "Y:\books\train\Rootkit-saudi\labs\Day3-persistence\WPM\NewGdpLib\NewGdpLib.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\Src\DumpLog\Log.cpp ..\Src\DumpLog\ProgramLog.cpp ..\Src\json\src\json_reader.cpp ..\Src\json\src\json_value.cpp ..\Src\json\src\json_writer.cpp ..\Src\Net\HttpDownload\HttpClient.cpp ..\Src\Net\HttpDownload\TcpipSocket.cpp ..\Src\Net\HttpDownload\UTL_FileTime.cpp ..\Src\Report\GReport.cpp ..\Src\Report\report.cpp ..\Src\Safe\dynamicFunction.cpp ..\Src\Safe\eBase64.cpp ..\Src\Safe\MD5.cpp ..\Src\Safe\StrEncrypt.cpp ..\Src\Strings\StringsHelper.cpp ..\Src\tinyXml\tinystr.cpp ..\Src\tinyXml\tinyxml.cpp ..\Src\tinyXml\tinyxmlerror.cpp ..\Src\tinyXml\tinyxmlparser.cpp ..\Src\Utilities\eRegOpt.cpp ..\Src\Utilities\FileVersion.cpp ..\Src\Utilities\NationLanguage.cpp ..\Src\Utilities\uid.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\Src\DumpLog\Log.cpp ..\Src\DumpLog\ProgramLog.cpp ..\Src\json\src\json_reader.cpp ..\Src\json\src\json_value.cpp ..\Src\json\src\json_writer.cpp ..\Src\Net\HttpDownload\HttpClient.cpp ..\Src\Net\HttpDownload\TcpipSocket.cpp ..\Src\Net\HttpDownload\UTL_FileTime.cpp ..\Src\Report\GReport.cpp ..\Src\Report\report.cpp ..\Src\Safe\dynamicFunction.cpp ..\Src\Safe\eBase64.cpp ..\Src\Safe\MD5.cpp ..\Src\Safe\StrEncrypt.cpp ..\Src\Strings\StringsHelper.cpp ..\Src\tinyXml\tinystr.cpp ..\Src\tinyXml\tinyxml.cpp ..\Src\tinyXml\tinyxmlerror.cpp ..\Src\tinyXml\tinyxmlparser.cpp ..\Src\Utilities\eRegOpt.cpp ..\Src\Utilities\FileVersion.cpp ..\Src\Utilities\GetCRC32.cpp ..\Src\Utilities\NationLanguage.cpp ..\Src\Utilities\uid.cpp ..\Src\Utilities\Util.cpp
+         Util.cpp
+     1>y:\books\train\rootkit-saudi\labs\day3-persistence\wpm\src\utilities\util.cpp(269): warning C4129: '*' : unrecognized character escape sequence
          uid.cpp
          NationLanguage.cpp
+         GetCRC32.cpp
          FileVersion.cpp
          eRegOpt.cpp
          tinyxmlparser.cpp
@@ -13,8 +16,8 @@
          StringsHelper.cpp
          StrEncrypt.cpp
          MD5.cpp
-     1>\\mac\home\books\train\project-saudi\wpm2.0\src\safe\md5.cpp(137): warning C4309: '=' : truncation of constant value
-     1>\\mac\home\books\train\project-saudi\wpm2.0\src\safe\md5.cpp(251): warning C4309: '=' : truncation of constant value
+     1>y:\books\train\rootkit-saudi\labs\day3-persistence\wpm\src\safe\md5.cpp(137): warning C4309: '=' : truncation of constant value
+     1>y:\books\train\rootkit-saudi\labs\day3-persistence\wpm\src\safe\md5.cpp(251): warning C4309: '=' : truncation of constant value
          eBase64.cpp
          dynamicFunction.cpp
          report.cpp
@@ -22,17 +25,17 @@
          UTL_FileTime.cpp
          TcpipSocket.cpp
          HttpClient.cpp
-         json_writer.cpp
-         json_value.cpp
-     1>\\mac\home\books\train\project-saudi\wpm2.0\src\json\src\json_value.cpp(1154): warning C4172: returning address of local variable or temporary
          Generating Code...
          Compiling...
+         json_writer.cpp
+         json_value.cpp
+     1>y:\books\train\rootkit-saudi\labs\day3-persistence\wpm\src\json\src\json_value.cpp(1154): warning C4172: returning address of local variable or temporary
          json_reader.cpp
          ProgramLog.cpp
          Log.cpp
          Generating Code...
        Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"\\Mac\Home\books\train\project-saudi\WPM2.0\bin\lib\Debug\WPMV2Lib.lib" /NOLOGO Debug\Log.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"Y:\books\train\Rootkit-saudi\labs\Day3-persistence\WPM\bin\lib\Debug\WPMV2Lib.lib" /NOLOGO Debug\Log.obj
          Debug\ProgramLog.obj
          Debug\json_reader.obj
          Debug\json_value.obj
@@ -53,11 +56,13 @@
          Debug\tinyxmlparser.obj
          Debug\eRegOpt.obj
          Debug\FileVersion.obj
+         Debug\GetCRC32.obj
          Debug\NationLanguage.obj
          Debug\uid.obj
-         NewGdpLib.vcxproj -> \\Mac\Home\books\train\project-saudi\WPM2.0\bin\lib\Debug\WPMV2Lib.lib
-     1>Done Building Project "\\Mac\Home\books\train\project-saudi\WPM2.0\NewGdpLib\NewGdpLib.vcxproj" (Build target(s)).
+         Debug\Util.obj
+         NewGdpLib.vcxproj -> Y:\books\train\Rootkit-saudi\labs\Day3-persistence\WPM\bin\lib\Debug\WPMV2Lib.lib
+     1>Done Building Project "Y:\books\train\Rootkit-saudi\labs\Day3-persistence\WPM\NewGdpLib\NewGdpLib.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:12.06
+Time Elapsed 00:00:13.52

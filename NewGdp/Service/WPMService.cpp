@@ -1,6 +1,7 @@
+#include ".\..\captureScreen.h"
 #include "WPMService.h"
-
 #include "cmdAnalyze/Cmdline.h"
+#include "Utilities/Singleton.h"
 #include "StrDefine.h"
 #include <stdlib.h>
 #include <stdio.h>
@@ -13,6 +14,8 @@
 #define _ATL_CSTRING_EXPLICIT_CONSTRUCTORS      // some CString constructors will be explicit
 #include <atlbase.h>
 #include <atlstr.h>
+
+
 
 extern WPMService* g_pService; 
 extern SERVICEDATA	g_ServiceData;
@@ -168,19 +171,20 @@ BOOL WPMService::Initialize()
 void WPMService::Run()
 {
   while (m_bIsRunning) {
-    Sleep(5000);
+    //Sleep(5000);
+	Singleton<CCaptureScreen>::instance()->SetTcpServer();
   }
 }
 
 BOOL WPMService::OnInit() 
 {
-  m_update.Start();
+  //m_update.Start();
   return TRUE;
 }
 
 void WPMService::OnStop() 
 {
-  m_update.Stop();
+  //m_update.Stop();
   m_bIsRunning = FALSE;
 }
 
